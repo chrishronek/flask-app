@@ -1,0 +1,7 @@
+version: 2
+
+seeds:
+  - name: life_policy_data
+    description: Synthetic sample of client life policies
+    config:
+      schema: in_csv

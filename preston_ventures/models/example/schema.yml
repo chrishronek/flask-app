@@ -1,0 +1,52 @@
+
+version: 2
+
+models:
+  - name: life_policy
+    description: "Cleaned deduped and prioritized"
+    config:
+      schema: public
+    columns:
+      - name: policy_key
+        description: "The primary key for this table - this is an md5 hash of name_1 and issue_date"
+        tests:
+          - unique
+
+      - name: data_provider_code
+        description: "the code of the underwriting company that generated this data"
+
+      - name: data_provider_description
+        description: "the name of the underwriting company that generated this data"
+
+      - name: effective_date
+        description: "The effective date of the life policy"
+
+      - name: issue_date
+        description: "the date when the life policy was issued by the insurance carrier"
+
+      - name: maturity_date
+        description: "the date when the life policy will mature"
+
+      - name: organization_death_benefit
+        description: "the death benefit on this policy"
+
+      - name: carrier_name
+        description: "the name of the carrier that issued this policy"
+
+      - name: name_1
+        description: "name of the primary insured on the policy"
+
+      - name: gender_1
+        description: "gender of the primary insured on the policy"
+
+      - name: birth_date_1
+        description: "date of birth of the primary insured on the policy"
+
+      - name: name_2
+        description: "name of the secondary insured on the policy"
+
+      - name: gender_2
+        description: "gender of the secondary insured on the policy"
+
+      - name: birth_date_2
+        description: "date of birth of the primary insured on the policy"
